@@ -1,30 +1,64 @@
 <?php
-    $a = 5;
-    $b = '05';
-    var_dump($a == $b);         // Всегда приводится к числу
-    var_dump((int)'012345');     // Приведение строки к числу 12345?
-    var_dump((float)123.0 === (int)123.0); // Строгая типизация. Типы данных должны быть одинаковыми, здесь int и float.
-    var_dump((int)0 === (int)'hello, world'); // Строка преобразуется к цислу и будет равна нулю
-?>
-
-
- 
-
-<?php 
-$title = 'PHP';
-$h1 = 'Hello World';
-$year = date('Y');
-?>
-
-
-<!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title><?php echo $title; ?></title>
- </head>
- <body>
- <h1><?php echo $h1; ?></h1>
- <span> <?php echo $year; ?></span> <br>
- </body> 
- </html>
+// Третье и четвертое задание
+function sum($a, $b){
+	return $a + $b;
+}
+function minus($a, $b){
+	return $a - $b;
+}
+function calc($a, $b, $operation){
+	return $operation($a, $b);
+}
+echo calc(1, 2, 'sum');
+exit;
+// Задание 2
+$a = rand(0,15);
+    switch ($a){
+        case 1:
+            echo ($a++).'<br>';
+        case 2:
+            echo ($a++).'<br>';
+        case 3:
+            echo ($a++).'<br>';
+        case 4:
+            echo ($a++).'<br>';
+        case 5:
+            echo ($a++).'<br>';
+        case 6:
+            echo ($a++).'<br>';
+        case 7:
+            echo ($a++).'<br>';
+        case 8:
+            echo ($a++).'<br>';
+        case 9:
+            echo ($a++).'<br>';
+        case 10:
+            echo ($a++).'<br>';
+        case 11:
+            echo ($a++).'<br>';
+        case 12:
+            echo ($a++).'<br>';
+        case 13:
+            echo ($a++).'<br>';
+        case 14:
+            echo ($a++).'<br>';
+        case 15:
+            echo $a;
+    }
+for ($i = random_int(0, 15); $i <= 15; $i++) {
+    echo $i,"\t";
+}
+exit();
+// Первое задание
+$a = -15;
+$b = -12;
+if($a >= 0 && $b >= 0){
+    echo ($a - $b);
+}elseif($a <0 && $b < 0){
+    echo ($a * $b);
+}elseif(($a < 0 && $b >= 0)||($a >=0 && $b <0)){  // или как - нибудь через xor?
+    echo ($a + $b);
+}
+else{
+    echo 'No';
+}
